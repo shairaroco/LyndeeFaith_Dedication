@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyndee Faith | Dedication Celebration</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-pink: #f8e5ec;
+            --soft-rose: #e8a5b8;
+            --deep-rose: #c86b85;
+            --accent-gold: #d4af37;
+            --text-color: #5a4b51;
+            --bg-light: #fffafb;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+
+        .script-font {
+            font-family: 'Great Vibes', cursive;
+            color: var(--deep-rose);
+        }
+
+        /* Header / Hero Section */
+        header {
+            min-height: 100vh;
+            background: linear-gradient(rgba(255, 250, 251, 0.75), rgba(248, 229, 236, 0.85)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(200, 107, 133, 0.15);
+            border: 2px solid var(--soft-rose);
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--deep-rose);
+            margin-bottom: 0.5rem;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            color: var(--deep-rose);
+            margin: 0.5rem 0;
+            font-weight: 400;
+        }
+
+        .date-badge {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            color: var(--text-color);
+        }
+
+        /* Countdown Timer */
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .time-box {
+            background: var(--primary-pink);
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            min-width: 70px;
+            border: 1px solid var(--soft-rose);
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 1.5rem;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            color: var(--deep-rose);
+        }
+
+        .time-box label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--deep-rose);
+        }
+
+        /* General Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--deep-rose);
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '🌸';
+            display: block;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Event Details */
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2.5rem 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--soft-rose);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--deep-rose);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--text-color);
+        }
+
+        /* Scripture Banner */
+        .scripture-banner {
+            background: var(--primary-pink);
+            text-align: center;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            border-radius: 20px;
+            border: 1px dashed var(--soft-rose);
+        }
+
+        .scripture-banner p {
+            font-size: 1.3rem;
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .scripture-banner span {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--deep-rose);
+        }
+
+        /* RSVP Form */
+        .rsvp-form {
+            background: var(--card-bg);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        .btn {
+            background: var(--deep-rose);
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #b05770;
+        }
+
+        /* Guestbook Section */
+        .wishes-list {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .wish-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--soft-rose);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .wish-item h4 {
+            color: var(--deep-rose);
+            margin-bottom: 0.3rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--primary-pink);
+            color: var(--text-color);
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .main-title { font-size: 2.5rem; }
+            nav ul { gap: 1rem; }
+            .timer-container { gap: 0.5rem; }
+            .time-box { min-width: 55px; padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Hero -->
+    <header>
+        <div class="hero-content">
+            <p class="subtitle">You Are Invited To The</p>
+            <h2 class="scripture-banner-title">Dedication Celebration</h2>
+            <h1 class="main-title script-font">Lyndee Faith</h1>
+            <p class="date-badge"><i class="fa-regular fa-calendar"></i> Saturday, September 26, 2026</p>
+            
+            <div class="timer-container" id="timer">
+                <div class="time-box"><span id="days">00</span><label>Days</label></div>
+                <div class="time-box"><span id="hours">00</span><label>Hours</label></div>
+                <div class="time-box"><span id="minutes">00</span><label>Mins</label></div>
+                <div class="time-box"><span id="seconds">00</span><label>Secs</label></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#verse">Verse</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#guestbook">Wishes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Details Section -->
+    <section id="details">
+        <h2 class="section-title">Event Details</h2>
+        <div class="details-grid">
+            <div class="card">
+                <i class="fa-solid fa-church"></i>
+                <h3>Ceremony</h3>
+                <p><strong>Time:</strong> 10:00 AM</p>
+                <p><strong>Location:</strong> Grace Community Church</p>
+                <p>123 Blessing Way, Suite 100</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Reception</h3>
+                <p><strong>Time:</strong> 12:30 PM</p>
+                <p><strong>Location:</strong> Rosewood Garden Pavilion</p>
+                <p>456 Celebration Lane</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-gift"></i>
+                <h3>Registry & Gifts</h3>
+                <p>Your presence is our greatest gift.</p>
+                <p>For those wishing to bless Lyndee Faith with a gift, a monetary blessing or gift card is greatly appreciated.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripture Banner Section -->
+    <section id="verse" style="padding-top: 0; padding-bottom: 0;">
+        <div class="scripture-banner">
+            <p>"For this child I prayed, and the Lord has granted me my petition which I asked of Him."</p>
+            <span>— 1 Samuel 1:27</span>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp">
+        <h2 class="section-title">RSVP</h2>
+        <form class="rsvp-form" id="rsvpForm">
+            <div class="form-group">
+                <label for="name">Your Full Name</label>
+                <input type="text" id="name" required placeholder="John & Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="attendance">Will you attend?</label>
+                <select id="attendance" required>
+                    <option value="Joyfully Accepts">Joyfully Accepts</option>
+                    <option value="Regretfully Declines">Regretfully Declines</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" min="1" max="10" value="1" required>
+            </div>
+            <button type="submit" class="btn">Send RSVP</button>
+        </form>
+    </section>
+
+    <!-- Guestbook Section -->
+    <section id="guestbook">
+        <h2 class="section-title">Leave a Wish for Lyndee Faith</h2>
+        <form class="rsvp-form" id="wishForm" style="margin-bottom: 2rem;">
+            <div class="form-group">
+                <label for="author">Your Name</label>
+                <input type="text" id="author" required placeholder="Aunt Sarah">
+            </div>
+            <div class="form-group">
+                <label for="message">Blessing / Message</label>
+                <textarea id="message" rows="4" required placeholder="May God bless you with wisdom, health, and love..."></textarea>
+            </div>
+            <button type="submit" class="btn">Post Blessing</button>
+        </form>
+
+        <div class="wishes-list" id="wishesList">
+            <!-- Wishes will dynamically render here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Celebrating the Dedication of <strong>Lyndee Faith</strong></p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">September 26, 2026</p>
+    </footer>
+
+    <!-- JavaScript Script -->
+    <script>
+        // Target Date: September 26, 2026
+        const targetDate = new Date('September 26, 2026 10:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = String(days).padStart(2, '0');
+                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+            } else {
+                document.getElementById('timer').innerHTML = "<h3 style='color: var(--deep-rose);'>The Special Day is Here!</h3>";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Handle RSVP Form
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Thank you, ${name}! Your RSVP response has been submitted.`);
+            this.reset();
+        });
+
+        // Guestbook Functionality
+        const wishesList = document.getElementById('wishesList');
+        const defaultWishes = [
+            { author: "Grandma Mary", message: "Welcome to God's family, sweet Lyndee Faith! May your life be filled with love and grace." },
+            { author: "Uncle James", message: "So happy to celebrate this sacred milestone with you all." }
+        ];
+
+        function renderWishes() {
+            const savedWishes = JSON.parse(localStorage.getItem('lyndee_wishes')) || defaultWishes;
+            wishesList.innerHTML = savedWishes.map(wish => `
+                <div class="wish-item">
+                    <h4>${wish.author}</h4>
+                    <p>"${wish.message}"</p>
+                </div>
+            `).join('');
+        }
+
+        document.getElementById('wishForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const author = document.getElementById('author').value;
+            const message = document.getElementById('message').value;
+
+            const savedWishes = JSON.parse(localStorage.getItem('lyndee_wishes')) || defaultWishes;
+            savedWishes.unshift({ author, message });
+            localStorage.setItem('lyndee_wishes', JSON.stringify(savedWishes));
+
+            renderWishes();
+            this.reset();
+        });
+
+        // Initial Load
+        renderWishes();P
+    </script>
+</body>
+</html>
